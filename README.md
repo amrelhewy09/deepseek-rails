@@ -17,6 +17,10 @@ Project is open source feel free to contribute!
       config.base_uri = ENV['DEEPSEEK_BASE_URI'] # (optional if ur hosting it on ur own)
     end
 
+
+  client = Deepseek::Client.new
+  response = client.chat(parameters: { model: "deepseek-chat", messages: [{ role: "user", content: prompt }], "stream": false })
+  puts response&.dig("choices", 0, "message", "content")
   ```
 
 ## Development
