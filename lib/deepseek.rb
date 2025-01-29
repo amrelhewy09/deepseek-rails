@@ -1,7 +1,7 @@
 require 'net/http'
 require 'json'
 module Deepseek
-  VERSION = "0.1.0"
+  VERSION = "0.2.0"
   class << self
     attr_accessor :configuration
   end
@@ -11,7 +11,7 @@ module Deepseek
 
     def chat(parameters:)
       base_uri = URI(Deepseek.configuration.base_uri || "https://api.deepseek.com")
-      uri = BASE_URI + '/chat/completions'
+      uri = base_uri + '/chat/completions'
       request = Net::HTTP::Post.new(uri, headers)
       request.body = parameters.to_json
 
