@@ -1,4 +1,4 @@
-# Deepseek::Rails
+# Deepseek
 
 A wrapper for integrating with the deepseek `chat completions` api.
 Project is open source feel free to contribute!
