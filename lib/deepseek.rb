@@ -1,6 +1,7 @@
 require 'net/http'
 require 'json'
 module Deepseek
+  VERSION = "0.1.0"
   class Client
     BASE_URI = URI('https://api.deepseek.com')
     def initialize
@@ -30,4 +31,17 @@ module Deepseek
     end
   end
   class DeepseekClientError < StandardError; end
+
+  class Configuration
+    attr_accessor :api_key
+  end
+
+  class << self
+    attr_accessor :configuration
+  end
+
+  def self.configure
+    self.configuration ||= Configuration.new
+    yield(configuration)
+  end
 end
