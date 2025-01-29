@@ -4,7 +4,7 @@ A wrapper for integrating with the deepseek `chat completions` api.
 Project is open source feel free to contribute!
 
 ## Installation
-- Add `gem "deepseek-rails", "~> 0.2.0"` to your `Gemfile`
+- Add `gem "deepseek-rails", "~> 0.3.0"` to your `Gemfile`
 - Execute `bundle install`
 
 ## Usage
