@@ -1,23 +1,23 @@
 # frozen_string_literal: true
 
-require_relative "lib/deepseek/rails/version"
+require_relative "lib/deepseek/version"
 
 Gem::Specification.new do |spec|
   spec.name = "deepseek-rails"
-  spec.version = Deepseek::Rails::VERSION
+  spec.version = Deepseek::VERSION
   spec.authors = ["amr elhewi"]
   spec.email = ["amrelhewi@gmail.com"]
 
   spec.summary = "Deepseek wrapper for ruby"
-  spec.homepage = ""
+  spec.homepage = "https://github.com/amrelhewy09/deepseek-rails"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
 
   spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://rubygems.org'"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = ""
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = "https://github.com/amrelhewy09/deepseek-rails"
+  spec.metadata["changelog_uri"] = ""
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
