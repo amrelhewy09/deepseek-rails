@@ -18,9 +18,12 @@ module Deepseek
       response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) do |http|
         http.request(request)
       end
-      JSON.parse(response.body)
+      if response.is_a?(Net::HTTPSuccess)
+        raise DeepseekClientError, "empty response" if response.body.empty?
+        JSON.parse(response.body)
+      end
 
-    rescue StandardError => e
+    rescue Net::ReadTimeout => e
       raise DeepseekClientError, e.message
     end
 
