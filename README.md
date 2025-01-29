@@ -4,7 +4,7 @@ A wrapper for integrating with the deepseek `chat completions` api.
 Project is open source feel free to contribute!
 
 ## Installation
-- Add `gem "deepseek-rails", "~> 0.1.0"` to your `Gemfile`
+- Add `gem "deepseek-rails", "~> 0.2.0"` to your `Gemfile`
 - Execute `bundle install`
 
 ## Usage
@@ -14,6 +14,7 @@ Project is open source feel free to contribute!
   
     Deepseek.configure do |config|
       config.api_key = ENV['DEEPSEEK_API_KEY']
+      config.base_uri = ENV['DEEPSEEK_BASE_URI'] # (optional if ur hosting it on ur own)
     end
 
   ```
