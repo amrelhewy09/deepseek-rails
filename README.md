@@ -1,30 +1,26 @@
 # Deepseek::Rails
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/deepseek/rails`. To experiment with that code, run `bin/console` for an interactive prompt.
+A wrapper for integrating with the deepseek `chat completions` api.
+Project is open source feel free to contribute!
 
 ## Installation
-
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
-
-Install the gem and add to the application's Gemfile by executing:
-
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+- Add `gem "deepseek-rails", "~> 0.1.0"` to your `Gemfile`
+- Execute `bundle install`
 
 ## Usage
+- Create a initializer file `config/initializers/deepseek.rb` and add your `API_KEY` (don't forget the require 😅)
+  ```
+    require "deepseek"
+  
+    Deepseek.configure do |config|
+      config.api_key = ENV['DEEPSEEK_API_KEY']
+    end
 
-TODO: Write usage instructions here
+  ```
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Clone the repo and test using `./bin/console` (Write any test code there and run it)
 
 ## Contributing
 
