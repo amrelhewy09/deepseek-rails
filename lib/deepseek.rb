@@ -2,12 +2,15 @@ require 'net/http'
 require 'json'
 module Deepseek
   VERSION = "0.1.0"
+  class << self
+    attr_accessor :configuration
+  end
   class Client
-    BASE_URI = URI('https://api.deepseek.com')
     def initialize
     end
 
     def chat(parameters:)
+      base_uri = URI(Deepseek.configuration.base_uri || "https://api.deepseek.com")
       uri = BASE_URI + '/chat/completions'
       request = Net::HTTP::Post.new(uri, headers)
       request.body = parameters.to_json
@@ -33,11 +36,9 @@ module Deepseek
   class DeepseekClientError < StandardError; end
 
   class Configuration
-    attr_accessor :api_key
-  end
-
-  class << self
-    attr_accessor :configuration
+    attr_accessor :api_key, :base_uri
+    def initialize
+    end
   end
 
   def self.configure

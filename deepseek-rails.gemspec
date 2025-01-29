@@ -1,10 +1,8 @@
 # frozen_string_literal: true
 
-require_relative "lib/deepseek"
-
 Gem::Specification.new do |spec|
   spec.name = "deepseek-rails"
-  spec.version = Deepseek::VERSION
+  spec.version = "0.1.0"
   spec.authors = ["amr elhewi"]
   spec.email = ["amrelhewi@gmail.com"]
 
