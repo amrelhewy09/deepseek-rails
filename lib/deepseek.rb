@@ -1,7 +1,7 @@
 require 'net/http'
 require 'json'
 module Deepseek
-  VERSION = "0.2.0"
+  VERSION = "0.4.0"
   class << self
     attr_accessor :configuration
   end

@@ -1,15 +1,14 @@
 # frozen_string_literal: true
-
 Gem::Specification.new do |spec|
   spec.name = "deepseek-rails"
-  spec.version = "0.1.0"
+  spec.version = "0.4.0"
   spec.authors = ["amr elhewi"]
   spec.email = ["amrelhewi@gmail.com"]
 
   spec.summary = "Deepseek wrapper for ruby"
   spec.homepage = "https://github.com/amrelhewy09/deepseek-rails"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 3.0.0"
+  spec.required_ruby_version = ">= 2.6.0"
 
   spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
