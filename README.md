@@ -10,8 +10,6 @@ Project is open source feel free to contribute! (Compatible with ruby 2.6.0+)
 ## Usage
 - Create a initializer file `config/initializers/deepseek.rb` and add your `API_KEY`
   ```
-    require "deepseek"
-  
     Deepseek.configure do |config|
       config.api_key = ENV['DEEPSEEK_API_KEY']
       config.base_uri = ENV['DEEPSEEK_BASE_URI'] # (optional if ur hosting it on ur own)
