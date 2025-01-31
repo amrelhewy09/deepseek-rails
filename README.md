@@ -4,11 +4,11 @@ A wrapper for integrating with the deepseek `chat completions` api.
 Project is open source feel free to contribute! (Compatible with ruby 2.6.0+)
 
 ## Installation
-- Add `gem "deepseek-rails", "~> 0.4.0"` to your `Gemfile`
+- Add `gem "deepseek-rails", "~> 0.4.0" , require: "deepseek"` to your `Gemfile`
 - Execute `bundle install`
 
 ## Usage
-- Create a initializer file `config/initializers/deepseek.rb` and add your `API_KEY` (don't forget the require 😅)
+- Create a initializer file `config/initializers/deepseek.rb` and add your `API_KEY`
   ```
     require "deepseek"
   
